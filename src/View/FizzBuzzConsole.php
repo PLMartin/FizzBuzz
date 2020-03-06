@@ -22,8 +22,8 @@ class FizzBuzzConsole extends Command
         $limit = 100;
         for ($number = 1; $number < $limit; $number++)
         {
-            $isFizzNumber = $this->fizzBuzz->isFizzNumber($number);
-            $isBuzzNumber = $this->fizzBuzz->isBuzzNumber($number);
+            $isFizzNumber = $this->fizzBuzz::isFizzNumber($number);
+            $isBuzzNumber = $this->fizzBuzz::isBuzzNumber($number);
 
             if ($isFizzNumber) {
                 $output->write("Fizz");

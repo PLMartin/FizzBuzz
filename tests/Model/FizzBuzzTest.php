@@ -39,7 +39,7 @@ class FizzBuzzTest extends TestCase
     public function testShouldReturnFizz(int $fizzNumber)
     {
         $errorMessage = "Le nombre ${fizzNumber} ne renvoie pas Fizz alors qu'il devrait.";
-        $this->assertEquals(true, $this->fizzBuzz->isFizzNumber($fizzNumber), $errorMessage);
+        $this->assertEquals(true, $this->fizzBuzz::isFizzNumber($fizzNumber), $errorMessage);
     }
 
     public function shouldNotReturnFizzDataProvider()
@@ -58,7 +58,7 @@ class FizzBuzzTest extends TestCase
     public function testShouldNotReturnFizz(int $fizzNumber)
     {
         $errorMessage = "Le nombre ${fizzNumber} renvoie Fizz alors qu'il ne devrait pas.";
-        $this->assertEquals(false, $this->fizzBuzz->isFizzNumber($fizzNumber), $errorMessage);
+        $this->assertEquals(false, $this->fizzBuzz::isFizzNumber($fizzNumber), $errorMessage);
     }
 
 
@@ -103,6 +103,6 @@ class FizzBuzzTest extends TestCase
     public function testShouldNotReturnBuzz(int $buzzNumber)
     {
         $errorMessage = "Le nombre ${buzzNumber} renvoie Buzz alors qu'il ne devrait pas.";
-        $this->assertEquals(false, $this->fizzBuzz->isBuzzNumber($buzzNumber), $errorMessage);
+        $this->assertEquals(false, $this->fizzBuzz::isBuzzNumber($buzzNumber), $errorMessage);
     }
 }
